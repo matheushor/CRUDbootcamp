@@ -10,6 +10,7 @@ Tipo de aplicativo: Web Forms.NET 7.0
 Requisitos: 👉 Linguagem C#; 👉 Boas práticas e Padrões de Programação; 👉 Não pode usar scaffolding.
 
 Fiz o commit pelo Microft Visual Studio, para clonar e abrir em seus Visual Studio > "<>Code" > "Open with Visual Studio" > Crie uma nova pasta e clone dentro dela 
-Ou abra seu Visual Studio
+Ou abra seu Visual Studio clique em "Clona um repositorio > cole isso na primeira aba https://github.com/matheushor/CRUDbootcamp.git > na segunda crie uma pasta vazia e a selecione > clique em clonar.
 
+Aqui vai um pequeno video de demonstração do meu projeto.
 https://www.youtube.com/watch?v=C1F5VF1ZVCY
