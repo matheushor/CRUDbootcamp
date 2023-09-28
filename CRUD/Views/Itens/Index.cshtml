@@ -1,0 +1,48 @@
+﻿@model List<ItemModel>
+@{
+    
+    ViewData["Title"] = "Listagem de Itens";
+}
+
+<div class="text-center">
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class = "btn btn-primary" role="button" asp-asp-controller="Item" asp-action="Novo">Adiconar novo item</a>
+    </div>
+    </br>
+
+    <h1 class="display-4">Listagem de Itens</h1>
+    </br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nome</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (ItemModel item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.Id</th>
+                        <td>@item.Nome</td>
+                        <td>@item.Codigo</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a role="button" class="btn btn-primary" asp-route-id="@item.Id" asp-controller="Itens" asp-action="Editar">Editar</a>
+                                <a role="button" class="btn btn-danger" asp-route-id="@item.Id" asp-controller="Itens" asp-action="Remover">Remover</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+                
+            }
+            
+        </tbody>
+    </table>
+</div>
+
+

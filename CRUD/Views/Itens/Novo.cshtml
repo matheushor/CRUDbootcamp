@@ -1,0 +1,29 @@
+﻿@model ItemModel
+@{
+    ViewData["Title"] = "Novo item";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">Cadastrar item</h1>
+</div>
+
+<form asp-controller="Itens" asp-action="Novo" method="post">
+
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control"  placeholder="Digite o nome do item">
+    </div>
+
+    </br>
+
+    <div class="form-group">
+        <label for="numero">Id do Item</label>
+        <input type="number" asp-for="Codigo" class="form-control" placeholder="Digite o numero do item">
+    </div>
+
+    </br>
+
+    <button type="submit" class="btn btn-primary ">Adicionar</button>
+    <a class="btn btn-secondary " asp-controller="Itens" asp-action="Index" role="button">Voltar</a>
+</form>
